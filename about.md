@@ -1,4 +1,4 @@
 layout: page
-title: "About"
+title: "about"
 permalink: https://unaigomezhernandez.github.io/about
 Prueba de about.
