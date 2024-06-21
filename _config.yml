@@ -26,8 +26,7 @@ author:
   pronouns         :  # example: "she/her"  
   bio              : "Joint PhD candidate on the influence of radical right populist parties on the EU's external action vis-à-vis China"
   location         : "Brussels"
-  employer 1       : "University of Edinburgh"
-  employer 2       : "KU Leuven"
+  employer         : "University of Edinburgh"
   uri              : # URL
   email            : "unai.gomez-hernandez@ed.ac.uk" 
 
