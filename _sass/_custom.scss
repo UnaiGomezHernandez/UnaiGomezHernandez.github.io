@@ -1,88 +1,75 @@
+/* DEPLOY TAG: oldpaper-v2 */
 /* === Typography === */
 $global-font-family: "Inter", system-ui, sans-serif !default;
 $header-font-family: "Inter", system-ui, sans-serif !default;
 $serif: "Source Serif 4", Georgia, serif !default;
 
-.page__content {
-  p, li {
-    font-family: $serif;
-    line-height: 1.7;
-    font-size: 1.02rem;
-  }
-}
+.page__content { p, li { font-family: $serif; line-height: 1.7; font-size: 1.02rem; } }
 
 /* === Old Paper Palette === */
 $body-background-color: #f7f1e1 !default;   /* aged paper */
-$text-color: #000000 !default;              
-$muted-text-color: #333333 !default;        
+$text-color: #000000 !default;
+$muted-text-color: #333333 !default;
 
 $link-color: #193366 !default;              /* ink blue links */
-$link-color-hover: #0f1f44 !default;        
-
-$primary-color: #193366 !default;
-$secondary-color: #666666 !default;
+$link-color-hover: #0f1f44 !default;        /* darker on hover */
 
 /* === Global Body === */
-body {
-  background: $body-background-color !important;
-  color: $text-color !important;
-}
+body { background: $body-background-color !important; color: $text-color !important; }
+h1, h2, h3, h4, h5, h6 { color: $text-color !important; }
 
-/* Masthead */
-.masthead {
-  background: #f7f1e1 !important;
-  border-bottom: 1px solid #e0d8c7;
+/* === Links === */
+a {
+  color: $link-color !important;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(25,51,102,.3);
 }
+a:hover { color: $link-color-hover !important; border-bottom-color: rgba(25,51,102,.6); }
 
-/* Footer */
-.page__footer {
-  background: #efe8d9 !important;
-  color: #000000 !important;
-}
+/* === Masthead (top nav bar) === */
+.masthead { background: #f7f1e1 !important; border-bottom: 1px solid #e0d8c7; }
+.masthead a, .masthead__menu-item { color: #000000 !important; }
+.masthead a:hover { color: $link-color !important; }
 
-/* Sidebar (author profile) */
-.sidebar {
-  background: #ffffff !important;
-  border: 1px solid #e0d8c7;
-  border-radius: 12px;
-  padding: 1rem;
-}
+/* === Footer === */
+.page__footer { background: #efe8d9 !important; color: #000000 !important; }
 
-/* Cards */
+/* === Sidebar (author profile) === */
+.sidebar { background: #ffffff !important; border: 1px solid #e0d8c7; border-radius: 12px; padding: 1rem; }
+
+/* === Cards (posts, publications, projects) === */
 .archive__item {
   background: #ffffff !important;
-  border: 1px solid #e0d8c7 !important;
-  border-radius: 12px !important;
-  padding: 1rem !important;
-  margin-bottom: 1.25rem !important;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.04) !important;
+  border: 1px solid #e0d8c7 !important; border-radius: 12px !important;
+  padding: 1rem !important; margin-bottom: 1.25rem !important;
+  box-shadow: 0 2px 6px rgba(0,0,0,.04) !important;
   transition: transform .12s ease, box-shadow .12s ease;
 }
+.archive__item:hover { transform: translateY(-2px); box-shadow: 0 6px 14px rgba(0,0,0,.08) !important; border-color: #d5cbb7 !important; }
+.archive__item-title { color: #000000 !important; font-weight: 600; }
+.archive__item-excerpt { color: #333333 !important; }
 
-.archive__item:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.08) !important;
-  border-color: #d5cbb7 !important;
+/* === Code Styling === */
+code {
+  background: #f0e8d9 !important; color: #111 !important;
+  padding: .15em .4em; border-radius: 4px;
+  font-family: "Fira Code","Courier New",monospace; font-size: .95em;
 }
+pre {
+  background: #f0e8d9 !important; border: 1px solid #d5cbb7 !important;
+  border-radius: 6px; padding: 1rem; overflow-x: auto;
+  font-family: "Fira Code","Courier New",monospace; font-size: .95em; line-height: 1.5;
+  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+}
+pre code { background: none !important; padding: 0; }
 
 /* === Copy Code Button (hover only) === */
 pre { position: relative; }
-
 .copy-btn {
-  position: absolute;
-  top: 8px;
-  right: 8px;
-  background: #193366;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.8rem;
-  font-family: inherit;
-  cursor: pointer;
-  opacity: 0;              /* hidden by default */
-  transition: opacity 0.2s ease;
+  position: absolute; top: 8px; right: 8px;
+  background: #193366; color: #fff; border: none; border-radius: 4px;
+  padding: .25rem .5rem; font-size: .8rem; font-family: inherit; cursor: pointer;
+  opacity: 0; transition: opacity .2s ease;
 }
-
-pre:hover .copy-btn { opacity: 0.85; }
+pre:hover .copy-btn { opacity: .85; }
 .copy-btn:hover { opacity: 1; }
