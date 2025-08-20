@@ -5,3 +5,43 @@ $serif: "Source Serif 4", Georgia, serif !default;
 .page__content {
   p, li { font-family: $serif; line-height: 1.7; font-size: 1.02rem; }
 }
+
+/* === Custom Colors (Cool Blue) === */
+$body-background-color: #ffffff !default;   /* page background */
+$text-color: #1f2937 !default;              /* dark gray text */
+$muted-text-color: #6b7280 !default;        /* lighter gray text */
+
+$link-color: #2563eb !default;              /* blue links */
+$link-color-hover: darken($link-color, 10%) !default;
+
+$primary-color: #2563eb !default;           /* main accent (blue) */
+$secondary-color: #10b981 !default;         /* secondary accent (emerald green) */
+
+/* Apply to body */
+body {
+  background: $body-background-color;
+  color: $text-color;
+}
+
+/* Headings */
+h1, h2, h3, h4 {
+  color: $text-color;
+}
+
+/* Nav / Masthead */
+.masthead {
+  background: $primary-color;
+}
+.masthead a,
+.masthead__menu-item {
+  color: #fff !important;
+}
+.masthead a:hover {
+  color: lighten(#fff, 15%);
+}
+
+/* Footer */
+.page__footer {
+  background: #f3f4f6;
+  color: $muted-text-color;
+}
