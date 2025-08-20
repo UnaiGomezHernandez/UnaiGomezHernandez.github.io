@@ -1,0 +1,7 @@
+$global-font-family: "Inter", system-ui, sans-serif !default;
+$header-font-family: "Inter", system-ui, sans-serif !default;
+$serif: "Source Serif 4", Georgia, serif !default;
+
+.page__content {
+  p, li { font-family: $serif; line-height: 1.7; font-size: 1.02rem; }
+}
