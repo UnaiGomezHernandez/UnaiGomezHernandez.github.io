@@ -11,70 +11,47 @@ $serif: "Source Serif 4", Georgia, serif !default;
   }
 }
 
-/* === Financial Times Style Palette === */
-$body-background-color: #fdf6f0 !default;   /* FT-style light salmon */
-$text-color: #000000 !default;              /* black text */
-$muted-text-color: #333333 !default;        /* softer black for secondary text */
+/* === Old Paper Palette === */
+$body-background-color: #f7f1e1 !default;   /* aged paper */
+$text-color: #000000 !default;              
+$muted-text-color: #333333 !default;        
 
-$link-color: #003366 !default;              /* dark blue links */
-$link-color-hover: #001a33 !default;        /* darker on hover */
+$link-color: #193366 !default;              /* ink blue links */
+$link-color-hover: #0f1f44 !default;        
 
-$primary-color: #003366 !default;           /* main accent */
-$secondary-color: #666666 !default;         /* optional accent */
+$primary-color: #193366 !default;
+$secondary-color: #666666 !default;
 
 /* === Global Body === */
 body {
-  background: $body-background-color;
-  color: $text-color;
+  background: $body-background-color !important;
+  color: $text-color !important;
 }
 
-/* Headings */
-h1, h2, h3, h4, h5, h6 {
-  color: $text-color;
-}
-
-/* === Links === */
-a {
-  color: $link-color !important;
-  text-decoration: none;
-  border-bottom: 1px solid rgba(0, 51, 102, 0.3);
-}
-a:hover {
-  color: $link-color-hover !important;
-  border-bottom-color: rgba(0, 51, 102, 0.6);
-}
-
-/* === Masthead (top nav bar) === */
+/* Masthead */
 .masthead {
-  background: #fdf6f0 !important;   /* same as page bg */
-  border-bottom: 1px solid #e5e0dc;
-}
-.masthead a,
-.masthead__menu-item {
-  color: #000000 !important;        /* black text */
-}
-.masthead a:hover {
-  color: $link-color !important;    /* dark blue hover */
+  background: #f7f1e1 !important;
+  border-bottom: 1px solid #e0d8c7;
 }
 
-/* === Footer === */
+/* Footer */
 .page__footer {
-  background: #f0e8e3 !important;   /* slightly darker salmon */
+  background: #efe8d9 !important;
   color: #000000 !important;
 }
 
-/* === Sidebar (author profile) === */
+/* Sidebar (author profile) */
 .sidebar {
-  background: #ffffff !important;   /* white card feel */
-  border: 1px solid #e5e0dc;
+  background: #ffffff !important;
+  border: 1px solid #e0d8c7;
   border-radius: 12px;
   padding: 1rem;
 }
 
-/* === Cards (posts, publications, projects) === */
+/* Cards */
 .archive__item {
-  background: #ffffff !important;   /* white cards */
-  border: 1px solid #e5e0dc !important;
+  background: #ffffff !important;
+  border: 1px solid #e0d8c7 !important;
   border-radius: 12px !important;
   padding: 1rem !important;
   margin-bottom: 1.25rem !important;
@@ -85,29 +62,17 @@ a:hover {
 .archive__item:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 14px rgba(0,0,0,0.08) !important;
-  border-color: #d8d2cd !important;
+  border-color: #d5cbb7 !important;
 }
 
-/* Card titles */
-.archive__item-title {
-  color: #000000 !important;
-  font-weight: 600;
-}
-
-/* Card excerpts */
-.archive__item-excerpt {
-  color: #333333 !important;
-}
-/* === Copy Code Button === */
-pre {
-  position: relative; /* so the button can sit in the corner */
-}
+/* === Copy Code Button (hover only) === */
+pre { position: relative; }
 
 .copy-btn {
   position: absolute;
   top: 8px;
   right: 8px;
-  background: #193366;         /* dark blue button */
+  background: #193366;
   color: #fff;
   border: none;
   border-radius: 4px;
@@ -115,11 +80,9 @@ pre {
   font-size: 0.8rem;
   font-family: inherit;
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 0;              /* hidden by default */
   transition: opacity 0.2s ease;
 }
 
-.copy-btn:hover {
-  opacity: 1;
-}
-
+pre:hover .copy-btn { opacity: 0.85; }
+.copy-btn:hover { opacity: 1; }
