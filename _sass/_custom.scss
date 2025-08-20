@@ -28,16 +28,17 @@ h1, h2, h3, h4 {
   color: $text-color;
 }
 
-/* Nav / Masthead */
+/* Masthead (top bar) */
 .masthead {
-  background: $primary-color;
+  background: #ffffff !important;  /* keep bar white */
+  border-bottom: 1px solid #e5e7eb; /* subtle divider */
 }
 .masthead a,
 .masthead__menu-item {
-  color: #fff !important;
+  color: #1f2937 !important;  /* dark gray text */
 }
 .masthead a:hover {
-  color: lighten(#fff, 15%);
+  color: #2563eb !important;  /* blue hover */
 }
 
 /* Footer */
