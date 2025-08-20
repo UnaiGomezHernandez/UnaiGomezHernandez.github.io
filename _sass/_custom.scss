@@ -98,3 +98,28 @@ a:hover {
 .archive__item-excerpt {
   color: #333333 !important;
 }
+/* === Copy Code Button === */
+pre {
+  position: relative; /* so the button can sit in the corner */
+}
+
+.copy-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #193366;         /* dark blue button */
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  font-family: inherit;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.copy-btn:hover {
+  opacity: 1;
+}
+
