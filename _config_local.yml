@@ -1,0 +1,132 @@
+# Reading Files
+include:
+  - .htaccess
+  - _pages
+  - files
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - CHANGELOG
+  - Capfile
+  - Gemfile
+  - Gruntfile.js
+  - LICENSE
+  - README
+  - Rakefile
+  - assets/js/_main.js
+  - assets/js/plugins
+  - assets/js/vendor
+  - config
+  - gulpfile.js
+  - log
+  - node_modules
+  - package.json
+  - tmp
+  - vendor
+keep_files:
+  - .git
+  - .svn
+encoding: "utf-8"
+markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Simplified local config for building without GitHub API
+title: "Unai GÓMEZ-HERNÁNDEZ"
+name: "Unai GÓMEZ-HERNÁNDEZ"
+description: "personal description"
+url: "http://localhost:4000"
+baseurl: ""
+
+# Collections
+collections:
+  publications:
+    output: true
+    permalink: /:collection/:path/
+  talks:
+    output: true
+    permalink: /:collection/:name/
+  teaching:
+    output: true
+    permalink: /:collection/:name/
+  portfolio:
+    output: true
+    permalink: /:collection/:name/
+
+# Site Author
+author:
+  name: "Unai Gómez-Hernández"
+  bio: "Joint PhD candidate on the influence of radical right populist parties on the EU's external action vis-à-vis China"
+  location: "Brussels"
+  employer: "University of Edinburgh & KU Leuven"
+  email: "unai.gomez-hernandez@ed.ac.uk"
+  orcid: "https://orcid.org/my-orcid?orcid=0009-0005-2358-914X"
+  linkedin: "unai-gómez-hernández"
+  twitter: "ugomezhernandez"
+
+markdown: kramdown
+highlighter: rouge
+
+plugins:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-feed
+  - jekyll-redirect-from
+
+# Defaults from original config
+defaults:
+  # _posts
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+  # _teaching
+  - scope:
+      path: ""
+      type: teaching
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comments: true
+  # _publications
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: single
+      author_profile: false
+      share: true
+      comments: true
+  # _portfolio
+  - scope:
+      path: ""
+      type: portfolio
+    values:
+      layout: single
+      author_profile: true
+      share: true
+      comment: true
+  # _talks
+  - scope:
+      path: ""
+      type: talks
+    values:
+      layout: talk
+      author_profile: true
+      share: true
